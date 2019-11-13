@@ -40,7 +40,6 @@ public class RequireNonNull extends ClassVisitor {
                         && owner.equals("java/util/Objects")
                         && name.equals("requireNonNull")
                         && desc.equals("(Ljava/lang/Object;)Ljava/lang/Object;")) {
-                    super.visitInsn(Opcodes.DUP);
                     super.visitMethodInsn(
                             Opcodes.INVOKEVIRTUAL,
                             "java/lang/Object",
